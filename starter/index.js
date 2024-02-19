@@ -4,16 +4,14 @@
 // const generateMarkdown = require("./utils/generateMarkdown");
 
 import fs from 'fs';
-import path from 'path'
 import inquirer from 'inquirer'
-import { fileURLToPath } from 'url'
 import generateMarkdown from './utils/generateMarkdown.js'
 
 // array of questions for user
 const questions = [
     {
         type: 'input',
-        name: 'Title of my project',
+        name: 'title',
         message: 'What is the title of your project?',
         validate: (input) => {
             if(input) {
@@ -37,12 +35,6 @@ const questions = [
                 return false;
             }
         }
-    },
-    {
-        type: 'confirm',
-        name: 'confirmTableContents',
-        message: 'Do you want a Table of Contents?',
-        default: true
     },
     {
         type: 'input',
@@ -131,25 +123,25 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'What is the usage of this project?',
+        message: 'What is the test of this project?',
         validate: (input) => {
             if(input) {
                 return true;
             } else {
-                console.log("Please enter details on usage for this project");
+                console.log("Please enter a test for this project");
                 return false;
             }
         }
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'Enter any questions you may have',
+        name: 'github',
+        message: 'Enter your GitHub username',
         validate: input => {
             if (input) {
                 return true;
             } else {
-                console.log('Please enter questions');
+                console.log('Please enter your Github username');
                 return false;
             }
         }
@@ -171,14 +163,20 @@ const questions = [
 
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-
-}
-
 // function to initialize program
 function init() {
-
+    inquirer.prompt(questions).then(answers => {
+        // dist is the folder name for where the readme that is generated is stored, fs.writeFile writes the file and checks
+        // the answers from the generateMarkdown and if there is an error it will be console logged, if not it print a message.
+        fs.writeFile("dist/README.md", generateMarkdown(answers), error => 
+        {
+            if (error){
+                console.log(error)
+            } else {
+                console.log("Congratulations, your README is located in dist")
+            }
+        })
+    })
 }
 
 // function call to initialize program

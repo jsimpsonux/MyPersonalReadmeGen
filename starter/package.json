@@ -9,9 +9,6 @@
   },
   "author": "jsimpsonux",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "^8.2.6"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsimpsonux/MyPersonalReadmeGen.git"
@@ -24,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/jsimpsonux/MyPersonalReadmeGen/issues"
   },
-  "homepage": "https://github.com/jsimpsonux/MyPersonalReadmeGen#readme"
+  "homepage": "https://github.com/jsimpsonux/MyPersonalReadmeGen#readme",
+  "dependencies": {
+    "inquirer": "^9.2.15"
+  }
 }
