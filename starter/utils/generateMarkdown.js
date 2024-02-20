@@ -1,4 +1,5 @@
 // function to generate markdown for README
+// Exported the function for generating the markdown of a README file, using "data." in order to access the const questions in the index.js file
 export default function generateMarkdown(data) {
   return `# ${data.title}
   ![Github license](https://img.shields.io/badge/license-${data.license.replace(/ /g,'%20')}-blue.svg)

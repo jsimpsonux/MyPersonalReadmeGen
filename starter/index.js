@@ -7,12 +7,13 @@ import fs from 'fs';
 import inquirer from 'inquirer'
 import generateMarkdown from './utils/generateMarkdown.js'
 
-// array of questions for user
+// An array of questions for user with keys that can be accessed
 const questions = [
     {
         type: 'input',
         name: 'title',
         message: 'What is the title of your project?',
+        // Validating the user input to make sure the user can't advance without entering the correct input.
         validate: (input) => {
             if(input) {
                 return true;

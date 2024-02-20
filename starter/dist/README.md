@@ -1,8 +1,8 @@
-# undefined
+# Jack's project
   ![Github license](https://img.shields.io/badge/license-Apache%20license%202.0-blue.svg)
 
   ## Description
-  lfakjnnjafdngadf
+  A project about Jack and his life
 
 
   ## Table of Contents
@@ -14,21 +14,21 @@
   - [Question](#questions)
 
   ## Installation
-  hbdljsanjnjnsdajvas
+  Simply open the index.js file and run the file.
 
   ## Usage
-  ksdjnjnsjasdnjsna
+  You can use this via the terminal
 
   ## License
   Apache license 2.0
 
   ## Contributing
-  islbdfjbksjdfb
+  Request can be made through email to the author
 
   ## Tests 
-  hbdsfbfkjsfdfsd
+  Console log the data
 
   ## Questions
-  If you have any questions, you can email me at dskanfjsnadf.
+  If you have any questions, you can email me at kagwa722@gmail.com.
   
- If you want to see more of my work at [sdfbakjskfbsdfa](https://github.com/sdfbakjskfbsdfa)
+ If you want to see more of my work at [jsimpsonux](https://github.com/jsimpsonux)
